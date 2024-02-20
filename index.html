@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .product-section::-webkit-scrollbar{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  
+    <!-- navbar -->
+
+    <nav class="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Flowcart</span>
+    </a>
+        <button type="button" class="cartbtn z-50 text-white  focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center bg-blue-600 hover:bg-blue-700 ">Cart (<span class="cart-quantity">0</span>)</button>
+    </div>
+  </nav>
+  
+  <!-- items grid -->
+  <div class="product-container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-20 place-items-center ">
+
+      
+  </div>
+
+  <!-- drawer component -->
+<div id="drawer-top-example" class="cart-section fixed top-0 left-0 right-0 z-40 w-full h-screen p-4 transition-transform -translate-y-full bg-zinc-900 pt-16">
+    <button type="button" data-drawer-hide=" drawer-top-example" aria-controls="drawer-top-example" class="close-cart text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+      <span class="sr-only">Close menu</span>
+   </button>
+    <div class="product-section text-white w-full h-[70vh] overflow-x-scroll">
+
+    </div>
+    <div class="checkout-section mt-5">
+        <h1 class="text-white font-bold text-2xl mb-6">Total $<span class="total-cost">000</span></h1>
+        <button type="button" class="text-white bg-blue-700 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">Checkout</button>
+    </div>
+</div>
+
+
+  <script src="./app.js"></script>
+</body>
+</html>
+
